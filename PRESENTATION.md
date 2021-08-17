@@ -181,12 +181,12 @@ Suppose we want to calculate an employee's pay raise using the given formula:
 ## Impure function example
 
 ```js
-const YEARLY_SALARY = 50000
-const RAISE =  0.04
+let yearlySalary = 50000
+let RAISE =  0.04
 
-const payRaise = salary => (salary * RAISE) + salary
+const payRaise = yearlySalary => (yearlySalary * RAISE) + yearlySalary
 
-payRaise(YEARLY_SALARY) // $ 52000
+payRaise(yearlySalary) // $ 52000
 ```
 
 ***
@@ -198,13 +198,13 @@ payRaise(YEARLY_SALARY) // $ 52000
 ## Pure function example
 
 ```js
-const YEARLY_SALARY = 50000
+const yearlySalary = 50000
 const RAISE =  0.04
 
 const payRaise = (salary, raise) => 
                         (salary * raise) + salary
 
-payRaise(YEARLY_SALARY, RAISE) // $ 52000
+payRaise(yearlySalary, RAISE) // $ 52000
 ```
 
 ***
